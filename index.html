@@ -69,6 +69,40 @@
             display: flex;
             justify-content: center;
         }
+        /* Estilo para la sección de servicios */
+        .service-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Estilo para los servicios individuales */
+        .service-box {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Estilo para las imágenes de los servicios */
+        .service-box img {
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para los titulares de los servicios */
+        .service-title {
+            padding: 15px;
+        }
+
+        /* Estilo para el contenedor de los servicios */
+        .service-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
 <body>
@@ -217,6 +251,58 @@
             </div>
         </div>
     </section>
+
+        <!-- Sección: Servicios -->
+        <section id="services" class="container service-section">
+            <h2 class="text-center mb-4">Servicios</h2>
+            <div class="service-container">
+                <!-- Servicio 1 -->
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="center-image">
+                            <img src="images/service1.jpg" alt="Habilidad 1">
+                        </div>
+                        <div class="service-title">
+                            <h4>Habilidad 1</h4>
+                            <p>
+                                Descripción del Servicio 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Nullam efficitur odio ac dui lacinia, id auctor libero bibendum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="center-image">
+                            <img src="images/service2.svg" alt="Habilidad 2">
+                        </div>
+                        <div class="service-title">
+                            <h4>Habilidad 2</h4>
+                            <p>
+                                Descripción del Servicio 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Nullam efficitur odio ac dui lacinia, id auctor libero bibendum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="center-image">
+                            <img src="images/service3.jpg" alt="Habilidad 3">
+                        </div>
+                        <div class="service-title">
+                            <h4>Habilidad 3</h4>
+                            <p>
+                                Descripción del Servicio 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Nullam efficitur odio ac dui lacinia, id auctor libero bibendum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
     <!-- Modal para C++ -->
