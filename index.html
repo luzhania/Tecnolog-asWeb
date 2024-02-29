@@ -1,11 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Mi Portafolio</title>
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding-top: 80px;
+            }
+        }
+
+        /* Centrar verticalmente el contenido en la columna izquierda */
+        .center-vertical {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        /* Centrar la imagen en la columna derecha */
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Estilo para los títulos de las subsecciones de servicios */
+        .service-title {
+            text-align: center;
+        }
+        
+        /* Estilo para la sección de proyectos */
+        .project-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Estilo para los proyectos individuales */
+        .project-slide {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 380px;
+            height: 310px;
+            margin: 1%;
+            overflow: hidden;
+        }
+
+        /* Estilo para las imágenes de los proyectos */
+        .project-slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilo para los titulares de los proyectos */
+        .project-titular {
+            padding: 15px;
+        }
+
+        /* Estilo para el contenedor de los proyectos */
+        .project-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello there</h1>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Mi Portafolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#about">Acerca de Mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección: Acerca de Mí -->
+    <section id="about" class="container mt-5">
+        <h2>Acerca de Mí</h2>
+        <div class="row">
+            <!-- Columna izquierda -->
+            <div class="col-md-6">
+                <div class="center-vertical">
+                    <h3>Luzhania Cespedes</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur odio ac dui lacinia, id auctor libero bibendum.
+                        In non leo eget sem posuere sagittis vel nec metus. Proin scelerisque vulputate feugiat.
+                        Vivamus euismod, libero at commodo interdum, leo metus gravida augue, eu sollicitudin justo turpis vel odio.
+                        Duis euismod augue eget maximus luctus. Sed condimentum risus vel nunc malesuada, ac cursus felis convallis.
+                        Nullam gravida dui sit amet orci tristique, vel dapibus nulla tincidunt.
+                    </p>
+                </div>
+            </div>
+            <!-- Columna derecha -->
+            <div class="col-md-6">
+                <div class="center-image">
+                    <img src="images/me.png" alt="Mi Foto" class="img-fluid rounded-circle" style="max-width: 200px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Habilidades -->
+    <section id="skills" class="container mt-5">
+        <h2 class="text-center mb-4">Habilidades</h2>
+        <div class="row mb-4">
+            <!-- Habilidad 1: C++ -->
+            <div class="col-md-6">
+                <div class="center-image">
+                    <img src="images/hability1.png" alt="C++" class="img-fluid" style="max-width: 180px;">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="center-vertical">
+                    <h4>C++</h4>
+                    <p>
+                        Desarrollo de software en C++. Experiencia en la creación de aplicaciones robustas y eficientes.
+                    </p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cppModal">
+                        VER
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <!-- Habilidad 2: Python -->
+            <div class="col-md-6">
+                <div class="center-image">
+                    <img src="images/hability2.png" alt="Python" class="img-fluid" style="max-width: 180px;">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="center-vertical">
+                    <h4>Python</h4>
+                    <p>
+                        Desarrollo de aplicaciones y scripts en Python. Experiencia en automatización y análisis de datos.
+                    </p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pythonModal">
+                        VER
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Habilidad 3: MongoDB -->
+            <div class="col-md-6">
+                <div class="center-image">
+                    <img src="images/hability3.png" alt="MongoDB" class="img-fluid" style="max-width: 180px;">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="center-vertical">
+                    <h4>MongoDB</h4>
+                    <p>
+                        Uso de MongoDB para bases de datos NoSQL. Diseño e implementación de esquemas y consultas eficientes.
+                    </p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mongoModal">
+                        VER
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Mis Proyectos -->
+    <section id="projects" class="container project-section">
+        <h2 class="text-center mb-4">Mis Proyectos</h2>
+        <div class="project-container">
+            <!-- Proyecto 1 -->
+            <div class="project-slide">
+                <img src="images/proyect1.png" alt="Proyecto 1">
+                <div class="project-titular">
+                    <h4>Proyecto 1</h4>
+                    <p>
+                        Descripción del Proyecto 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam efficitur odio ac dui lacinia, id auctor libero bibendum.
+                    </p>
+                </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="project-slide">
+                <img src="images/proyect2.png" alt="Proyecto 2">
+                <div class="project-titular">
+                    <h4>Proyecto 2</h4>
+                    <p>
+                        Descripción del Proyecto 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam efficitur odio ac dui lacinia, id auctor libero bibendum.
+                    </p>
+                </div>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="project-slide">
+                <img src="images/proyect3.gif" alt="Proyecto 3">
+                <div class="project-titular">
+                    <h4>Proyecto 3</h4>
+                    <p>
+                        Descripción del Proyecto 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam efficitur odio ac dui lacinia, id auctor libero bibendum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal para C++ -->
+    <div class="modal fade" id="cppModal" tabindex="-1" role="dialog" aria-labelledby="cppModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cppModalLabel">C++</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Detalles sobre C++. Desarrollo de software en C++. Experiencia en la creación de aplicaciones robustas y eficientes.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Python -->
+    <div class="modal fade" id="pythonModal" tabindex="-1" role="dialog" aria-labelledby="pythonModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pythonModalLabel">Python</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Detalles sobre Python. Desarrollo de aplicaciones y scripts en Python. Experiencia en automatización y análisis de datos.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para MongoDB -->
+    <div class="modal fade" id="mongoModal" tabindex="-1" role="dialog" aria-labelledby="mongoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mongoModalLabel">MongoDB</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Detalles sobre MongoDB. Uso de MongoDB para bases de datos NoSQL. Diseño e implementación de esquemas y consultas eficientes.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
